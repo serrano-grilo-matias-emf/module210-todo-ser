@@ -22,8 +22,8 @@ jobs:
         uses: azure/docker-login@v1
         with:
           login-server: ${{ env.REG_NAME }}
-          username: ${{ secrets.ACR_USER }}
-          password: ${{ secrets.ACR_PASSWORD }}
+          username: ${{ secrets.AZURE_REGISTRY_USER }}
+          password: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
 
       - name: Build Docker image
         run: |
