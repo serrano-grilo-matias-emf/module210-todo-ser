@@ -47,7 +47,7 @@ jobs:
             https://red-ground-036ff0b03.6.azurestaticapps.net
             https://container.matiasgrilo.emf-informatique.ch
           uploadArtifacts: "true"
-          configPath: "./.lightouserc.json"
+          configPath: "./.lighthouserc.json"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
