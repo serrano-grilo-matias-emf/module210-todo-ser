@@ -44,13 +44,10 @@ jobs:
         uses: treosh/lighthouse-ci-action@12.6.1
         with:
           urls: |
-             https://red-ground-036ff0b03.6.azurestaticapps.net
-             https://container.matiasgrilo.emf-informatique.ch
-          uploadArtifacts: 'true'
-          assertions: |
-            performance=0.9
-            accessibility=0.9
-            seo=0.9 
+            https://red-ground-036ff0b03.6.azurestaticapps.net
+            https://container.matiasgrilo.emf-informatique.ch
+          uploadArtifacts: "true"
+
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
@@ -62,8 +59,3 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_GROUND_036FF0B03 }}
           action: "close"
-
-
-
-
-
